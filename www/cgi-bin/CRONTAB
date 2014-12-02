@@ -1,0 +1,33 @@
+# 每 10 分鐘從 list.net 轉信至 list.oz
+4,14,24,34,44,54 * * * * /usr/local/slist/.bin/plugins/net2oz_appr.pl
+
+# 每 10 分鐘更新縮圖
+2,12,22,32,42,52 * * * * /usr/local/slist/www/cgi-bin/utils/screenshot.pl
+
+# 每 10 分鐘更新 RSS、OPML
+5,15,25,35,45,55 * * * * /usr/local/slist/.bin/plugins/rss.pl
+5,15,25,35,45,55 * * * * /usr/local/slist/.bin/plugins/opml.pl
+
+# 每 10 分鐘更新 Tag Cloud
+3,13,23,33,43,53 * * * * /usr/local/slist/www/cgi-bin/tagcloud.pl
+
+# 掃描 attachments 目錄是否有病毒，並移除
+6 * * * * /usr/bin/clamscan --remove -r /usr/local/slist/www/htdocs/attachments
+
+# 產生統計圖表
+26 * * * * /usr/local/slist/www/cgi-bin/graph/bar_total.cgi
+46 * * * * /usr/local/slist/www/cgi-bin/graph/bar_this_month.cgi
+
+# 每週寄出 "一週電子報摘要"
+0 12 * * * /usr/local/slist/.bin/plugins/digester.pl
+45 23 * * * /usr/local/slist/.bin/plugins/digester.pl
+
+# 每 12 分鐘清除驗證碼
+1 * * * * rm -f /tmp/validate/0* /tmp/validate/1*
+13 * * * * rm -f /tmp/validate/2* /tmp/validate/3*
+25 * * * * rm -f /tmp/validate/4* /tmp/validate/5*
+37 * * * * rm -f /tmp/validate/6* /tmp/validate/7*
+49 * * * * rm -f /tmp/validate/8* /tmp/validate/9*
+
+# 每天 4 次更新氣象資訊
+2 3,9,15,21 * * * /usr/local/slist/www/cgi-bin/cwb/cwb_get.sh

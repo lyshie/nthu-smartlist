@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title>[% TITLE %]</title>
+	<link rel="alternate" type="application/rss+xml" title="訂閱全部電子報" href="/slist/rss/nthu.xml" />
+	<link rel="alternate" type="application/rss+xml" title="最新發行電子報" href="/slist/rss/latest.xml" />
+	<link rel="stylesheet" href="/slist/style.css" media="screen" />	
+	<link rel="stylesheet" href="/slist/thickbox.css" media="screen" />
+	<link rel="stylesheet" href="/slist/js/jquery/plugins/autocomplete/jquery.autocomplete.css" media="screen" />
+	<script type="text/javascript" src="/slist/js/jquery/jquery-latest.js"></script>
+	<script type="text/javascript" src="/slist/js/dynifs.js"></script>
+</head>
+<body onload="DYNIFS.resize('viewer');">
+	<div id="container">
+		<div id="header">
+			[% TOPIC %]
+		</div>
+		<div id="content">
+			[% CONTENT %]
+		</div>
+		<div id="sidebar">
+			<ul>
+				[% MENU %]
+			</ul>
+				[% WIDGET_1 %]
+				[% WIDGET_2 %]
+				[% WIDGET_3 %]
+		</div>
+		<div id="footer">本系統由「<a href="http://net.nthu.edu.tw/" target="_blank">計算機與通訊中心::網路系統組</a>」維護</div>
+	</div>
+</body>
+<!-- lyshie_20090415: 1.2.1-nthu (rev 18) -->
+</html>

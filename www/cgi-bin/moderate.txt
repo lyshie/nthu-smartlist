@@ -1,0 +1,5 @@
+<span class="alert"><b>審查注意事項：</b></span>
+1. 審查電子報時，請用「線上瀏覽」閱讀並確認<a href="http://net.nthu.edu.tw/2009/faq:mail_encode_charset" target="_blank">信件編碼(Encode)</a>、<span class="alert">標頭欄位(Header)</span>與<span class="alert">內容(Body)</span>
+，如：編碼是否正常、寄件者來源(From)、主旨(Subject)是否適當，且建議不要填入副本(Cc)欄位。
+確認無誤後再發行，避免用戶收到不適當或無法解讀的信件格式。
+2. 為考量訂閱戶閱覽之便利性及退訂閱之權益，請電子報管理者參考<a href="http://net.nthu.edu.tw/2009/slist:recommendation" target="_blank">電子報發行建議事項</a>。

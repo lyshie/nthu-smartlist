@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    // lyshie_20090409: anonymous function for IE, Firefox, Opera
+    window.onload = function() {
+                        if (window.print) {
+                            window.print();
+                        }
+                    };
+</script>
+#MAIL#
+<hr />
+國立清華大學電子報<br />
+http://list.net.nthu.edu.tw/slist/

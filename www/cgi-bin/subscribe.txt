@@ -1,0 +1,22 @@
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+您好：
+
+　　您如果未提出訂閱電子報的需求，請忽略此信。
+
+申請來源：#IP#
+申請訂閱的 Email：#EMAIL#
+
+以下是您欲「訂閱」的電子報清單：
+============================================
+#LISTS#
+
+如確定要「訂閱」，請點選以下連結：
+http://list.net.nthu.edu.tw/slist/cgi-bin/activate.cgi?action=subscribe&uid=#UID#
+
+-- 
+國立清華大學 電子報系統
+<slist@list.net.nthu.edu.tw>
+http://list.net.nthu.edu.tw/slist/

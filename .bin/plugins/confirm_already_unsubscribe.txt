@@ -1,0 +1,13 @@
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+#MAIL# 未訂閱 [#LISTNAME#] 電子報，
+無需取消訂閱！
+
+線上取消訂閱來源位址：#IP#
+
+-- 
+國立清華大學 電子報系統
+<slist@list.net.nthu.edu.tw>
+http://list.net.nthu.edu.tw/slist/

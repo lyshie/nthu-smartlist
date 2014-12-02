@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title>[% TITLE %]</title>
+	<link rel="stylesheet" href="/slist/style.css" media="screen" />	
+	<script type="text/javascript">
+	//<![CDATA[
+	function CheckAll(theForm, id)
+	{
+		for (var i = 0; i < theForm.elements.length; i++)
+		{
+			if ((theForm.elements[i].type == "checkbox")
+				&& (theForm.elements[i].id == id))
+				theForm.elements[i].checked = !theForm.elements[i].checked;
+			// theForm.elements[i].checked = true;
+		}
+	}
+
+	function SelectArticles(action)
+	{
+		var act = ''
+		var actobj = document.getElementsByName('action');
+		if (action == 'approve') {
+			act = '發行';
+			actobj[0].value = 'APPROVE';
+		}
+		else if (action == 'discard') {
+			act = '刪除';
+			actobj[0].value = 'DISCARD';
+		}
+
+		var obj = document.getElementsByName(action);
+		var chknum = 0;
+		var msg = '';
+		var agree;
+
+		var i;
+		for (i = 0; i < obj.length; i++) {
+			if (obj[i].checked) {
+				if (chknum < 3) {
+					msg = msg + '\n' + obj[i].value;
+				}
+				chknum++;
+			}
+		}
+
+		var memo = '';
+
+		if (action == 'approve') {
+			memo =	'發送前請務必確認發送內容無誤。\n\n' +
+				'為避免造成訂戶困擾，' +
+				'請儘量不要同時發送多封電子報！\n\n\n';
+		}
+
+		// 先行確認，避免管理者忽略訊息
+		if (chknum > 0) {
+			var code = Math.floor((Math.random() * 10)).toString() +
+				Math.floor((Math.random() * 10)).toString() +
+				Math.floor((Math.random() * 10)).toString() +
+				Math.floor((Math.random() * 10)).toString() +
+				Math.floor((Math.random() * 10)).toString() +
+				Math.floor((Math.random() * 10)).toString();
+
+			agree = window.prompt('如欲繼續操作請輸入驗證碼(六位數字)：'+ code, '');
+			if (!agree) {
+				window.alert('未輸入驗證碼，取消操作！');
+				return;
+			}
+
+			if (agree != code) {
+				window.alert('驗證碼錯誤，取消操作！');
+				return;
+			}
+		}
+
+		if (chknum < 1) {
+			window.alert('您未選取任何文章！');
+		}
+		else if (chknum < 4) {
+			agree = window.confirm(memo + '確定要' + act + '以下編號的電子報？\n' + msg + '\n\n共' + chknum + '篇');
+			if (agree) {
+				document.moderate.submit();
+			}
+		}
+		else {
+			agree = window.confirm(memo + '確定要' + act + '以下編號的電子報？\n' + msg + '\n...' + '\n\n共' + chknum + '篇');
+			if (agree) {
+				document.moderate.submit();
+			}
+		}
+	}
+	//]]>
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			[% TOPIC %]
+		</div>
+		<div id="content">
+			[% CONTENT %]
+		</div>
+		<div id="sidebar">
+			<ul>
+				[% MENU %]
+			</ul>
+				[% WIDGET_1 %]
+				[% WIDGET_2 %]
+				[% WIDGET_3 %]
+		</div>
+		<div id="footer">本系統由「<a href="http://net.nthu.edu.tw/" target="_blank">計算機與通訊中心::網路系統組</a>」維護</div>
+	</div>
+</body>
+<!-- lyshie_20090415: 1.2.1-nthu (rev 18) -->
+</html>

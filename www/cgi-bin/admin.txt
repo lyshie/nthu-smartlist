@@ -1,0 +1,7 @@
+
+為避免過多信件無法寄達，即日起 (2012.04.11) 本系統提供自動檢查 Email 名稱
+的功能，管理者可透過『<strong>編輯訂戶清單</strong>』的方式來刪除清單中異常的 Email。
+
+如有系統上的問題，請聯絡 <a href="mailto:slist@list.net.nthu.edu.tw?subject=管理系統的問題">slist@list.net.nthu.edu.tw</a>。
+
+<h3><a Href="http://lists.net.nthu.edu.tw/" target="_blank">2014 年新版電子報系統</a>已上線，敬邀您共同測試，詳細資訊請<a href="http://net.nthu.edu.tw/2009/lists" target="_blank">點此連結</a>。</h3>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title>[% TITLE %]</title>
+	<link rel="stylesheet" href="/slist/style.css" media="screen" />	
+	<script type="text/javascript" src="/slist/js/jquery/jquery-latest.js"></script>
+	<script type="text/javascript" src="/slist/js/widgets/check_select.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	function CheckAll(theForm)
+	{
+		for (var i = 0; i < theForm.elements.length; i++)
+		{
+			if (theForm.elements[i].type == "checkbox")
+				theForm.elements[i].checked = !theForm.elements[i].checked;
+			// theForm.elements[i].checked = true;
+		}
+	}
+	//]]>
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			[% TOPIC %]
+		</div>
+		<div id="content">
+			[% CONTENT %]
+		</div>
+		<div id="sidebar">
+			<ul>
+				[% MENU %]
+			</ul>
+				[% WIDGET_1 %]
+				[% WIDGET_2 %]
+				[% WIDGET_3 %]
+		</div>
+		<div id="footer">本系統由「<a href="http://net.nthu.edu.tw/" target="_blank">計算機與通訊中心::網路系統組</a>」維護</div>
+	</div>
+</body>
+<!-- lyshie_20090415: 1.2.1-nthu (rev 18) -->
+</html>

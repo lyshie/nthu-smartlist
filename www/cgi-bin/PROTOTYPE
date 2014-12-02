@@ -1,0 +1,78 @@
+[檔案功能說明]
+admin.cgi		管理者主功能選單	[管理者]
+administrators		超級管理者設定檔	[ 系統 ]
+approved.cgi		已發行刊物列表		[管理者]
+archives.cgi		電子報全覽		[ 一般 ]
+contact.cgi		連絡資訊		[ 一般 ]
+dist.cgi		訂閱戶清單下載		[管理者]
+editdist.cgi		訂閱戶清單編輯		[管理者]
+finddist.cgi		查詢訂閱情形		[ 一般 ]
+hosts.allow		IP 限定設定檔		[ 系統 ]
+index.cgi		首頁			[ 一般 ]
+intro.cgi		電子報介紹		[ 一般 ]
+list.cgi		典藏刊物瀏覽		[ 一般 ]
+ListSearch.pm		搜尋模組		[ 系統 ]
+ListTemplate.pm		樣板模組		[ 系統 ]
+ListUtils.pm		電子報模組		[ 系統 ]
+login.cgi		登入處理		[管理者]
+logout.cgi		登出處理		[管理者]
+moderate.cgi		審查電子報前端		[管理者]
+moderate_s.cgi		審查電子報後端		[管理者]
+ourSession.pm		Session 模組		[ 系統 ]
+reader.cgi		訂閱戶功能選單		[ 一般 ]
+search.cgi		搜尋功能		[ 一般 ]
+settings.cgi		電子報屬性設定		[管理者]
+stat.cgi		電子報統計資料		[ 一般 ]
+subscribe.cgi		訂閱功能		[ 一般 ]
+templates/		樣板			[ 系統 ]
+tmp/			Session 暫時存放	[ 系統 ]
+unsubscribe.cgi		取消訂閱功能		[ 一般 ]
+upload.cgi		訂閱戶清單上傳		[管理者]
+view.cgi		閱讀電子報功能		[ 一般 ]
+viewer.cgi		閱讀程式		[ 一般 ]
+viewer_s.cgi		閱讀程式		[管理者]
+view_s.cgi		閱讀電子報功能		[管理者]
+
+
+[ SmartList 主程式架構 ]
+
+   產生摘要      審查發行      訂閱確認     OMPL      RSS
++-------------+-------------+------------+---------+--------+
+| digester.pl | moderate.pl | confirm.pl | opml.pl | rss.pl |
++-------------+-------------+-----+------+---------+--------+
+| flist                           |      |
++---------------------------------+      |
+| sendmail                               |
++----------------------------------------+
+
+
+[ SmartCool 主程式架構 ]
+
++-----------------+
+| ourSession      |
++-----------------+---------------+-----------------+
+| ListTemplate.pm | ListSearch.pm | JQueryWidget.pm |
++-----------------+---------------+-----------------+
+| ListUtils.pm                    |
++---------------------------------+
+
+
+[ 退/訂閱機制 ]
+
+(subscribe/import)
+-----+-----------+
+     |           |
++----+-----+     |
+|          |     |
+| unneeded |     |
+|          |     |
++----+-----+     |
+     |           |
++----+-----+     |
+|          |     |
+|   dist   +-----+(export)
+|          |     |
++----+-----+     |
+     |           |
+-----+-----------+
+(unsubscribe)

@@ -1,0 +1,32 @@
+                  [ VISI ]        [ PUBL ]
+archives.cgi      unless(next)    if(enter)
+list.cgi          if(enter)       if(enter)
+ListQuery.pm      unless(next)    unless(next)
+                  if(enter)       if(enter)
+ListSearch.pm     if(enter)       if(enter)
+ListTemplate.pm   unless(next)    unless(next)
+                  unless(return)  unless(return)
+view.cgi          unless(return)  unless(return)
+view_s.cgi(*)     unless(return)  unless(return)
+finddist.cgi      unless(next) 
+subscribe.cgi     unless(next)
+unsubscribe.cgi   unless(next)
+viewer.cgi        unless(return)  unless(return)
+viewer_s.cgi(*)   unless(return)  unless(return)
+ListUtils.pm      unless(return)  unless(return)
+tagcloud.pl       unless(next)    unless(next)
+
+SmartCool
+一般檔案     chmod 660
+一般執行檔案 chmod 750
+一般目錄     chmod 770
+程式產生檔案 chmod 666 與 umask(0000)
+
+SmartList
+一般檔案     chmod 640
+一般執行檔案 chmod 750
+一般目錄     chmod 750
+
+& 符號的取代 => &amp;
+sid 須傳遞以維持登入階段
+Pager 功能 => ListQuery.pm, search.cgi

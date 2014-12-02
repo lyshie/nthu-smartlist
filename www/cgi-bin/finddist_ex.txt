@@ -1,0 +1,18 @@
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+您好：
+
+　　您如果未查詢電子報訂閱情形，請忽略此信。
+
+查詢來源：#IP#
+
+以下是您目前已訂閱的電子報：
+============================================
+#RESULT#
+
+-- 
+國立清華大學 電子報系統
+<slist@list.net.nthu.edu.tw>
+http://list.net.nthu.edu.tw/slist/

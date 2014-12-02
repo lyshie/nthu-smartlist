@@ -1,0 +1,15 @@
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+指令錯誤：#COMMAND#！
+
+目前可用的指令：
+subscribe - 訂閱電子報
+unsubscribe - 取消訂閱電子報
+confirm 編號 - 確認通知
+
+-- 
+國立清華大學 電子報系統
+<slist@list.net.nthu.edu.tw>
+http://list.net.nthu.edu.tw/slist/
